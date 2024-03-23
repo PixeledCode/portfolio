@@ -1,10 +1,16 @@
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
+import { Lexend } from 'next/font/google'
 import { cookies } from 'next/headers'
 
 import './globals.css'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
+
+const lexend = Lexend({
+	subsets: ['latin'],
+	display: 'swap',
+})
 
 export async function generateMetadata() {
 	return {
@@ -61,9 +67,10 @@ export default function RootLayout({
 			<head>
 				<ThemeScript />
 			</head>
-			<body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+			<body
+				className={`${GeistSans.variable} ${GeistMono.variable} ${lexend.className}`}
+			>
 				<ThemeToggle initialTheme={theme} />
-				<div className="blur"></div>
 				{children}
 			</body>
 		</html>

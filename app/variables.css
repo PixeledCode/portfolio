@@ -53,7 +53,7 @@
 	--mask-hidden: transparent;
 	--transparent: transparent;
 
-	--accent: #049fff;
+	--accent: #301fd4;
 	--white: #fff;
 	--black: #000;
 	--selection: var(--grayA4);
@@ -65,6 +65,7 @@
 	--shadow-color: hsla(0, 6%, 6%, 0.05);
 
 	--page-width: 1072px;
+	--talk-width: 1120px;
 	--content-width: 640px;
 	--page-left: auto;
 	--page-top: 128px;

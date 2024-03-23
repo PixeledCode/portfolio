@@ -8,7 +8,6 @@
 body {
 	text-rendering: optimizeLegibility;
 	color: var(--text-color);
-	font-family: var(--font-geist-sans);
 	background-color: var(--bg);
 	padding-inline: var(--body-margin);
 }
