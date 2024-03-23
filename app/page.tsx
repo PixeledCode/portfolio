@@ -2,7 +2,7 @@ import data from '@/content/home.json'
 
 export default function Home() {
 	return (
-		<main className="min-h-screen vertical mx-auto pt-top max-w-page">
+		<main className="min-h-screen vertical mx-auto pt-top pb-6 max-w-page">
 			<div className="main-grid">
 				<article className="col-start-2">
 					<div>
