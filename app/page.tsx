@@ -121,7 +121,9 @@ const ProjectLink = ({
 			rel="noreferrer"
 			href={project.link}
 		>
-			<h3>{project.title}</h3>
+			<h3 className="underline sm:no-underline decoration-muted">
+				{project.title}
+			</h3>
 			<p className="leading-7 text-muted">{project.description}</p>
 		</a>
 	)
