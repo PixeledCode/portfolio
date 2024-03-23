@@ -53,7 +53,7 @@ export default function Home() {
 								label="LinkedIn"
 							/>
 							, or <Link href="mailto:ashoaib540918@gmail.com" label="Email" />.
-							My work is also available at{' '}
+							My work is available at{' '}
 							<Link href="https://github.com/PixeledCode" label="Github" />,{' '}
 							<Link href="https://codepen.io/pixeledcode" label="Codepen" />,
 							and <Link href="https://bento.me/pixeledcode" label="Bento" />

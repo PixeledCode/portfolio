@@ -144,23 +144,33 @@
 
 .accentLink span {
 	position: relative;
-	padding-inline: 2px;
 }
 
-.accentLink::before {
-	content: '';
-	position: absolute;
-	left: -0.1px;
-	right: -0.1px;
-	bottom: 0;
-	height: 100%;
-	transform: scaleY(0.1);
-	transition: transform 0.3s var(--ease-in-out-quint);
-	transform-origin: bottom;
-	background-color: var(--accent);
-	opacity: 0.6;
+@media (min-width: 768px) {
+	.accentLink::before {
+		content: '';
+		position: absolute;
+		left: -0.1px;
+		right: -0.1px;
+		bottom: 0;
+		height: 100%;
+		transform: scaleY(0.1);
+		transition: transform 0.3s var(--ease-out-cubic);
+		transform-origin: bottom;
+		background-color: var(--accent);
+		opacity: 0.6;
+	}
 }
 
-.accentLink:hover::before {
-	transform: scaleY(1);
+@media (max-width: 768px) {
+	.accentLink {
+		text-decoration: underline;
+		text-decoration-color: var(--accent);
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.accentLink:hover::before {
+		transform: scaleY(1);
+	}
 }
