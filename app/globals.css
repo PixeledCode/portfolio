@@ -2,7 +2,7 @@
 
 * {
 	scrollbar-width: thin;
-	scrollbar-color: var(--mono5) transparent;
+	scrollbar-color: var(--gray5) transparent;
 }
 
 body {
