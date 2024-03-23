@@ -49,6 +49,10 @@
 	--grayA11: rgba(0, 0, 0, 0.565);
 	--grayA12: rgba(0, 0, 0, 0.91);
 
+	--mask-visible: #000;
+	--mask-hidden: transparent;
+	--transparent: transparent;
+
 	--accent: #049fff;
 	--white: #fff;
 	--black: #000;
