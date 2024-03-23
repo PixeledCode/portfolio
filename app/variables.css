@@ -49,7 +49,7 @@
 	--grayA11: rgba(0, 0, 0, 0.565);
 	--grayA12: rgba(0, 0, 0, 0.91);
 
-	--accent: #069af3;
+	--accent: #049fff;
 	--white: #fff;
 	--black: #000;
 	--selection: var(--grayA4);
@@ -69,6 +69,7 @@
 
 [data-theme-color='dark'] {
 	color-scheme: dark;
+	--accent: #069af3;
 	--alpha: rgba(28, 28, 28, 0.9);
 	--shadow-color: rgba(0, 0, 0, 0.55);
 	--gray1: #1a1a1a;
