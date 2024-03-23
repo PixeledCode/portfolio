@@ -12,17 +12,64 @@ const config: Config = {
 			fontFamily: {
 				mono: ['var(--font-geist-mono)'],
 			},
+			fontSize: {
+				heading1: [
+					'4rem',
+					{
+						fontWeight: '600',
+						lineHeight: '5rem',
+					},
+				],
+				heading2: [
+					'2.25rem',
+					{
+						fontWeight: '600',
+						lineHeight: '2.875rem',
+					},
+				],
+				heading3: [
+					'2rem',
+					{
+						fontWeight: '500',
+						lineHeight: '2.5rem',
+					},
+				],
+				heading4: [
+					'1.5rem',
+					{
+						fontWeight: '500',
+						letterSpacing: '2%',
+						lineHeight: '1.875rem',
+					},
+				],
+				body1: [
+					'2rem',
+					{
+						fontWeight: '400',
+						lineHeight: '2.5rem',
+					},
+				],
+				body2: [
+					'1.5rem',
+					{
+						fontWeight: '400',
+						lineHeight: '1.875rem',
+					},
+				],
+			},
 			colors: {
 				white: 'var(--white)',
 				black: 'var(--black)',
-				selection: 'var(--selection)',
 				bg: 'var(--bg)',
 				hover: 'var(--hover)',
 				default: 'var(--text-color)',
 				muted: 'var(--text-muted)',
-				alpha: 'var(--alpha)',
-				'shadow-color': 'var(--shadow-color)',
+
 				accent: 'var(--accent)',
+				dark: 'var(--text-dark)',
+				medium: 'var(--text-medium)',
+				light: 'var(--text-light)',
+				'extra-light': 'var(--text-extra-light)',
 			},
 			spacing: {
 				page: '1072px',

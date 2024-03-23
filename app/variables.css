@@ -49,20 +49,25 @@
 	--grayA11: rgba(0, 0, 0, 0.565);
 	--grayA12: rgba(0, 0, 0, 0.91);
 
-	--mask-visible: #000;
-	--mask-hidden: transparent;
-	--transparent: transparent;
-
+	--gray100: hsla(246, 78%, 11%, 100%);
+	--gray80: hsla(246, 78%, 11%, 80%);
+	--gray70: hsla(246, 78%, 11%, 70%);
+	--gray60: hsla(246, 78%, 11%, 60%);
 	--accent: #301fd4;
 	--white: #fff;
 	--black: #000;
+
+	--text-dark: var(--gray100);
+	--text-medium: var(--gray80);
+	--text-light: var(--gray70);
+	--text-extra-light: var(--gray60);
+	--text-accent: var(--accent);
+
 	--selection: var(--grayA4);
 	--bg: var(--gray1);
 	--hover: var(--gray3);
 	--text-color: var(--gray12);
 	--text-muted: var(--gray11);
-	--alpha: hsla(0, 0%, 100%, 0.9);
-	--shadow-color: hsla(0, 6%, 6%, 0.05);
 
 	--page-width: 1072px;
 	--talk-width: 1120px;
@@ -75,8 +80,6 @@
 [data-theme-color='dark'] {
 	color-scheme: dark;
 	--accent: #069af3;
-	--alpha: rgba(28, 28, 28, 0.9);
-	--shadow-color: rgba(0, 0, 0, 0.55);
 	--gray1: #1a1a1a;
 	--gray2: #1c1c1c;
 	--gray3: #232323;
@@ -101,6 +104,11 @@
 	--grayA10: hsla(0, 0%, 100%, 0.446);
 	--grayA11: hsla(0, 0%, 100%, 0.592);
 	--grayA12: hsla(0, 0%, 100%, 0.923);
+
+	--gray100: hsla(0, 0%, 90%, 100%);
+	--gray80: hsla(0, 0%, 70%, 100%);
+	--gray70: hsla(0, 0%, 60%, 100%);
+	--gray60: hsla(0, 0%, 50%, 100%);
 }
 
 @layer utilities {

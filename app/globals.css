@@ -7,7 +7,7 @@
 
 body {
 	text-rendering: optimizeLegibility;
-	color: var(--text-color);
+	color: var(--text-dark);
 	background-color: var(--bg);
 	padding-inline: var(--body-margin);
 }
@@ -31,6 +31,9 @@ body {
 }
 
 .blur {
+	--mask-visible: #000;
+	--mask-hidden: transparent;
+	--transparent: transparent;
 	--direction: to bottom;
 	--h: min(96px, var(--page-top));
 	user-select: none;
