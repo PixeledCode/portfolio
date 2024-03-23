@@ -2,22 +2,42 @@ import data from '@/content/home.json'
 
 export default function Home() {
 	return (
-		<main className="min-h-screen vertical mx-auto pt-top pb-6 max-w-page">
+		<main className="min-h-screen vertical mx-auto pt-top pb-top max-w-page">
 			<div className="main-grid">
 				<article className="col-start-2">
 					<div>
-						<h1 className="font-medium">PixeledCode</h1>
-						<p className="mt-6">
+						<h1 className="font-medium" data-animate>
+							PixeledCode
+						</h1>
+						<p
+							className="mt-6"
+							data-animate
+							style={{
+								'--stagger': 1,
+							}}
+						>
 							Frontend Engineer bridging the gap between design and tech at{' '}
 							<Link href="https://civicdatalab.in" label="CivicDataLab" />. I
 							like to build experiences that are delightful to use.
 						</p>
-						<p className="mt-4">
+						<p
+							className="mt-4"
+							data-animate
+							style={{
+								'--stagger': 2,
+							}}
+						>
 							Currently learning about animations on the web.
 						</p>
 					</div>
 
-					<section className="mt-8">
+					<section
+						className="mt-8"
+						data-animate
+						style={{
+							'--stagger': 3,
+						}}
+					>
 						<h2 className="text-muted">Projects</h2>
 						<div className="mt-2 vertical gap-4 md:gap-1">
 							{data.projects.map((project) => (
@@ -26,7 +46,13 @@ export default function Home() {
 						</div>
 					</section>
 
-					<section className="mt-8">
+					<section
+						className="mt-8"
+						data-animate
+						style={{
+							'--stagger': 4,
+						}}
+					>
 						<h2 className="text-muted">Writing</h2>
 						<div className="mt-2 vertical gap-4 md:gap-1">
 							{data.writings.map((writing) => (
@@ -35,7 +61,13 @@ export default function Home() {
 						</div>
 					</section>
 
-					<blockquote className="p-4 my-6 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+					<blockquote
+						data-animate
+						style={{
+							'--stagger': 5,
+						}}
+						className="p-4 my-6 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800"
+					>
 						<p className="leading-relaxed">
 							Good code is a love letter to the next developer who will maintain
 							it
@@ -43,8 +75,14 @@ export default function Home() {
 						</p>
 					</blockquote>
 
-					<section className="mt-8">
-						<h2>Connect</h2>
+					<section
+						className="mt-8"
+						data-animate
+						style={{
+							'--stagger': 6,
+						}}
+					>
+						<h2 className="text-muted">Connect</h2>
 						<p className="mt-5">
 							Reach me through{' '}
 							<Link href="https://twitter.com/PixeledCode" label="Twitter" />,{' '}
