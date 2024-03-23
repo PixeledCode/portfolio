@@ -1,0 +1,31 @@
+{
+	"projects": [
+		{
+			"title": "OPub Mono",
+			"description": "A monorepo to speed up the development of Open Data Dashboards",
+			"link": "https://github.com/CivicDataLab/opub-mono"
+		},
+		{
+			"title": "Next Dark Mode",
+			"description": "Pattern documentation for implementing proper dark mode in Next app router",
+			"link": "https://github.com/PixeledCode/next-dark-mode"
+		},
+		{
+			"title": "Counter",
+			"description": "An app to keep track and also perform habit tracking",
+			"link": "https://github.com/PixeledCode/counter-app"
+		},
+		{
+			"title": "Boarding Pass",
+			"description": "An app to store boarding passes like Apple Wallet",
+			"link": "https://github.com/PixeledCode/boarding-pass"
+		}
+	],
+	"writings": [
+		{
+			"title": "Making Open Data Platforms More Accessible",
+			"description": "A blog post on how to make open data platforms more accessible for everyone",
+			"link": "https://medium.com/civicdatalab/making-open-data-platforms-more-accessible-e309cc5b8d84"
+		}
+	]
+}

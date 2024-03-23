@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color-scheme: light;
+	--ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+	--ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+	--ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	--ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	--ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+	--ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	--ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+	--ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+	--ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+	--ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+	--ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+	--ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	--ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+	--ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+	--ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+	--ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+	--ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+	--gray1: #fcfcfc;
+	--gray2: #f8f8f8;
+	--gray3: #f3f3f3;
+	--gray4: #ededed;
+	--gray5: #e8e8e8;
+	--gray6: #e2e2e2;
+	--gray7: #dbdbdb;
+	--gray8: #c7c7c7;
+	--gray9: #8f8f8f;
+	--gray10: #858585;
+	--gray11: #6f6f6f;
+	--gray12: #171717;
+	--grayA1: rgba(0, 0, 0, 0.012);
+	--grayA2: rgba(0, 0, 0, 0.027);
+	--grayA3: rgba(0, 0, 0, 0.047);
+	--grayA4: rgba(0, 0, 0, 0.071);
+	--grayA5: rgba(0, 0, 0, 0.09);
+	--grayA6: rgba(0, 0, 0, 0.114);
+	--grayA7: rgba(0, 0, 0, 0.141);
+	--grayA8: rgba(0, 0, 0, 0.22);
+	--grayA9: rgba(0, 0, 0, 0.439);
+	--grayA10: rgba(0, 0, 0, 0.478);
+	--grayA11: rgba(0, 0, 0, 0.565);
+	--grayA12: rgba(0, 0, 0, 0.91);
+
+	--accent: #069af3;
+	--white: #fff;
+	--black: #000;
+	--selection: var(--grayA4);
+	--bg: var(--gray1);
+	--hover: var(--gray3);
+	--text-color: var(--gray12);
+	--text-muted: var(--gray11);
+	--alpha: hsla(0, 0%, 100%, 0.9);
+	--shadow-color: hsla(0, 6%, 6%, 0.05);
+
+	--page-width: 1072px;
+	--content-width: 640px;
+	--page-left: auto;
+	--page-top: 128px;
+	--body-margin: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--alpha: rgba(28, 28, 28, 0.9);
+		--shadow-color: rgba(0, 0, 0, 0.55);
+		--gray1: #1a1a1a;
+		--gray2: #1c1c1c;
+		--gray3: #232323;
+		--gray4: #282828;
+		--gray5: #2e2e2e;
+		--gray6: #343434;
+		--gray7: #3e3e3e;
+		--gray8: #505050;
+		--gray9: #707070;
+		--gray10: #7e7e7e;
+		--gray11: #a0a0a0;
+		--gray12: #ededed;
+		--grayA1: hsla(0, 0%, 100%, 0);
+		--grayA2: hsla(0, 0%, 100%, 0.026);
+		--grayA3: hsla(0, 0%, 100%, 0.056);
+		--grayA4: hsla(0, 0%, 100%, 0.077);
+		--grayA5: hsla(0, 0%, 100%, 0.103);
+		--grayA6: hsla(0, 0%, 100%, 0.129);
+		--grayA7: hsla(0, 0%, 100%, 0.172);
+		--grayA8: hsla(0, 0%, 100%, 0.249);
+		--grayA9: hsla(0, 0%, 100%, 0.386);
+		--grayA10: hsla(0, 0%, 100%, 0.446);
+		--grayA11: hsla(0, 0%, 100%, 0.592);
+		--grayA12: hsla(0, 0%, 100%, 0.923);
+	}
+}
+
+@layer utilities {
+	.horizontal {
+		@apply flex flex-row;
+	}
+
+	.vertical {
+		@apply flex flex-col;
+	}
+
+	.horizontal.center {
+		@apply justify-center items-center;
+	}
+
+	.vertical.center {
+		@apply justify-center items-center;
+	}
+
+	.main-grid {
+		@apply grid grid-cols-[192px_var(--content-width)_192px] gap-x-6 items-start;
+	}
+
+	@media (max-width: 1024px) {
+		.main-grid {
+			@apply grid-cols-[auto_var(--content-width)_auto] gap-x-4;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.main-grid {
+			@apply vertical justify-start;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	:root {
+		--page-top: 64px;
+	}
+}
+
+.accentLink {
+	position: relative;
+}
+
+.accentLink span {
+	position: relative;
+	padding-inline: 2px;
+}
+
+.accentLink::before {
+	content: '';
+	position: absolute;
+	left: -0.1px;
+	right: -0.1px;
+	bottom: 0;
+	height: 100%;
+	transform: scaleY(0.1);
+	transition: transform 0.3s var(--ease-in-out-quint);
+	transform-origin: bottom;
+	background-color: var(--accent);
+	opacity: 0.6;
+}
+
+.accentLink:hover::before {
+	transform: scaleY(1);
+}
