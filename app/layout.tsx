@@ -54,7 +54,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	const savedTheme = cookies().get('theme-color')
-	const theme = savedTheme?.value || 'light'
+	const theme = savedTheme?.value || 'system'
 
 	return (
 		<html lang="en" data-theme-color={theme}>
@@ -80,7 +80,7 @@ const ThemeScript = () => {
 				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
 					const newColorScheme = event.matches ? "dark" : "light";
 					document.documentElement.setAttribute('data-theme-color', newColorScheme)
-			});
+				});
 			}
 		})()
 	`
