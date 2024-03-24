@@ -23,6 +23,11 @@
 	],
 	"writings": [
 		{
+			"title": "Sharing custom charts on the fly using Satori",
+			"description": "Share consistent and custom no matter the screen size",
+			"link": "/talk/echarts-satori"
+		},
+		{
 			"title": "Making Open Data Platforms More Accessible",
 			"description": "A blog post on how to make open data platforms more accessible for everyone",
 			"link": "https://medium.com/civicdatalab/making-open-data-platforms-more-accessible-e309cc5b8d84"

@@ -7,8 +7,8 @@ import { Layout } from '../components/Layout'
 export const Page10 = () => {
 	return (
 		<Layout heading="fin." description="That’s all for today.">
-			<div className="flex-grow vertical justify-between">
-				<div className="md:text-body2">
+			<div className="flex-grow">
+				<div className="md:text-body2 mt-4 md:mt-0">
 					<p className="text-light">Code & Demo</p>
 					<a
 						className="text-accent"
@@ -19,6 +19,7 @@ export const Page10 = () => {
 						github.com/PixeledCode/echarts-satori
 					</a>
 				</div>
+				<div className="hidden md:block md:w-72 aspect-square bg-gray-300 mx-auto mt-10 md:mt-20"></div>
 
 				<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 md:text-body2 pb-10">
 					<a

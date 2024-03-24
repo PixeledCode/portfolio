@@ -56,7 +56,7 @@ export default function Home() {
 								'--stagger': 4,
 							}}
 						>
-							<h2 className="text-muted">Writing</h2>
+							<h2 className="text-muted">Writing / Decks</h2>
 							<div className="mt-2 vertical gap-4 md:gap-1">
 								{data.writings.map((writing) => (
 									<ProjectLink key={writing.title} project={writing} />
