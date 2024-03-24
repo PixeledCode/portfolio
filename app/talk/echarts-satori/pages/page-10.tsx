@@ -4,6 +4,7 @@ import { Github } from '../components/icons/github'
 import { LinkedIn } from '../components/icons/linkedin'
 import { Twitter } from '../components/icons/twitter'
 import { Layout } from '../components/Layout'
+import Link from 'next/link'
 
 export const Page10 = () => {
 	return (
@@ -20,13 +21,16 @@ export const Page10 = () => {
 						github.com/PixeledCode/echarts-satori
 					</a>
 				</div>
-				<Image
-					src={'/site.png'}
-					width={288}
-					height={288}
-					className="hidden md:block aspect-square mx-auto mt-20 "
-					alt="qr code for pixeledcode.com"
-				/>
+				<div className="hidden md:flex justify-center items-center mt-20">
+					<Link href="/">
+						<Image
+							src={'/site.png'}
+							width={288}
+							height={288}
+							alt="qr code for pixeledcode.com"
+						/>
+					</Link>
+				</div>
 
 				<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 md:text-body2 pb-10">
 					<a

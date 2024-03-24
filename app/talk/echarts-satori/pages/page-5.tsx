@@ -7,7 +7,7 @@ export const Page5 = () => {
 			description={
 				<>
 					Here’s how it works on mobile. <br /> The charts are not
-					understandable and needed a fix.
+					understandable once shared.
 				</>
 			}
 		>
