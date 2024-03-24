@@ -117,13 +117,18 @@ const Link = ({ href, label }: { href: string; label: string }) => (
 const ProjectLink = ({
 	project,
 }: {
-	project: { title: string; description: string; link: string }
+	project: {
+		title: string
+		description: string
+		link: string
+		external?: boolean
+	}
 }) => {
 	return (
 		<a
 			className="leading-7 inline-block px-3 sm:py-3 -mx-3 hover:bg-hover rounded-md"
-			target="_blank"
-			rel="noreferrer"
+			target={project.external ? '_blank' : '_self'}
+			rel={project.external ? 'noreferrer' : ''}
 			href={project.link}
 		>
 			<h3 className="underline sm:no-underline decoration-muted">
