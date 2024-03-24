@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const Page1 = () => {
 	return (
@@ -19,14 +20,19 @@ export const Page1 = () => {
 			<p className="mt-20 text-body2 text-light">
 				ReactJS Bangalore, April 6, 2024
 			</p>
-
-			<Image
-				src={'/talk.png'}
-				width={240}
-				height={240}
-				className="hidden md:block aspect-square mx-auto mt-8 "
-				alt="qr code for slide deck"
-			/>
+			<motion.div
+				exit={{ opacity: 0, y: -20 }}
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+			>
+				<Image
+					src={'/talk.png'}
+					width={240}
+					height={240}
+					className="hidden md:block aspect-square mx-auto mt-8 "
+					alt="qr code for slide deck"
+				/>
+			</motion.div>
 		</section>
 	)
 }

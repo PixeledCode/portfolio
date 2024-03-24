@@ -74,10 +74,10 @@ export default function Talk() {
 		<>
 			<ProgressBar progress={progress} />
 			<main className="max-w-talk mx-auto px-body-margin [&>section]:min-h-screen hidden md:block">
-				{showPage(slide, pages)}
+				<AnimatePresence>{showPage(slide, pages)}</AnimatePresence>
 
 				<div className="absolute grid justify-between gap-2 right-8 bottom-8 h-20 z-10">
-					<AnimatePresence>
+					<AnimatePresence initial={false}>
 						{slide !== 0 ? (
 							<motion.button
 								ref={prevRef}

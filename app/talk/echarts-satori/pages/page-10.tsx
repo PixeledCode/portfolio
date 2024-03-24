@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export const Page10 = () => {
 	return (
-		<Layout heading="fin." description="That’s all for today.">
+		<Layout heading="fin." description="That’s all for today." animate={false}>
 			<div className="flex-grow">
 				<div className="md:text-body2 mt-4 md:mt-0">
 					<p className="text-light">Code & Demo</p>

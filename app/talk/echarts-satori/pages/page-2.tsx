@@ -1,4 +1,5 @@
 import { Spinner } from '../components'
+import { motion } from 'framer-motion'
 
 export const Page2 = () => {
 	return (
@@ -19,16 +20,18 @@ export const Page2 = () => {
 			<p className="mt-5 md:mt-20 text-lg md:text-body2 text-light">
 				ReactJS Bangalore, April 6, 2024
 			</p>
-			<p className="mt-5 md:mt-20 text-lg md:text-heading2">
-				Hi, I’m Shoaib. <br />
-				Senior Frontend Engineer @CivicDataLab
-			</p>
-			<p className="mt-6 text-lg md:text-body2 text-light hidden md:block">
-				my love for biryani is as infinite as this loader
-			</p>
-			<div className="mt-2 hidden md:block">
-				<Spinner size={32} />
-			</div>
+			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+				<p className="mt-5 md:mt-20 text-lg md:text-heading2">
+					Hi, I’m Shoaib. <br />
+					Senior Frontend Engineer @CivicDataLab
+				</p>
+				<p className="mt-6 text-lg md:text-body2 text-light hidden md:block">
+					my love for biryani is as infinite as this loader
+				</p>
+				<div className="mt-2 hidden md:block">
+					<Spinner size={32} />
+				</div>
+			</motion.div>
 		</section>
 	)
 }
