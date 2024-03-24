@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export const Page2 = () => {
 	return (
-		<section className="pt-12 md:pt-24">
+		<section className="pt-12 md:pt-0 vertical justify-center">
 			<h1 className="text-heading3 md:text-heading1 max-w-[834px]">
 				Sharing custom charts on the fly using Satori
 			</h1>
@@ -20,7 +20,11 @@ export const Page2 = () => {
 			<p className="mt-5 md:mt-20 text-lg md:text-body2 text-light">
 				ReactJS Bangalore, April 6, 2024
 			</p>
-			<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				className="min-h-[272px]"
+			>
 				<p className="mt-5 md:mt-20 text-lg md:text-heading2">
 					Hi, I’m Shoaib. <br />
 					Senior Frontend Engineer @CivicDataLab

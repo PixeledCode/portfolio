@@ -12,7 +12,7 @@ export const Layout = ({
 	animate?: boolean
 }) => {
 	return (
-		<section className="pt-12 md:pt-16 vertical">
+		<section className="pt-12 md:pt-0 vertical justify-center">
 			<h2 className="md:text-heading4 text-extra-light uppercase">{heading}</h2>
 
 			<motion.p
