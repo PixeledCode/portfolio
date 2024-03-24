@@ -33,7 +33,7 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 	return (
 		<div
 			onClick={(e: any) => doubleClick(e)}
-			className="absolute inset-0"
+			className="absolute w-full h-full top-0 left-0"
 		></div>
 	)
 

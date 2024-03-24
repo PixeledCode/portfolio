@@ -6,6 +6,7 @@
 }
 
 body {
+	position: relative;
 	text-rendering: optimizeLegibility;
 	color: var(--text-dark);
 	background-color: var(--bg);
