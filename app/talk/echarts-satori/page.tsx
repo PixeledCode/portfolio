@@ -108,7 +108,7 @@ export default function Talk() {
 				</div>
 			</main>
 			<main className="md:hidden">
-				<MobileLayout />
+				<MobileLayout pages={pages} />
 			</main>
 		</>
 	)
