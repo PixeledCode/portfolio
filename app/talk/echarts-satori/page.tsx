@@ -14,6 +14,7 @@ import { Page10 } from './pages/page-10'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence, animate } from 'framer-motion'
 import MobileLayout from './mobile-layout'
+import { ProgressBar } from '@/components/progress-bar'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
@@ -65,11 +66,12 @@ export default function Talk() {
 			window.removeEventListener('keydown', handleKey)
 		}
 	}, [nextSlide, prevSlide])
-	console.log(slide, pages.length - 1)
 
+	const progress = slide === 0 ? 0 : ((slide + 1) / pages.length) * 100
 	return (
 		<>
-			<main className="max-w-talk mx-auto px-6 [&>section]:min-h-screen hidden md:block">
+			<ProgressBar progress={progress} />
+			<main className="max-w-talk mx-auto px-body-margin [&>section]:min-h-screen hidden md:block">
 				{showPage(slide, pages)}
 
 				<div className="absolute grid justify-between gap-2 right-8 bottom-8 h-20 z-10">
@@ -118,7 +120,7 @@ export default function Talk() {
 					</AnimatePresence>
 				</div>
 			</main>
-			<main className="md:hidden">
+			<main className="md:hidden px-body-margin">
 				<MobileLayout pages={pages} />
 			</main>
 		</>

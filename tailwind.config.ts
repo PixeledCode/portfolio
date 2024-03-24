@@ -76,6 +76,7 @@ const config: Config = {
 				talk: '1120px',
 				content: '640px',
 				top: 'var(--page-top)',
+				'body-margin': 'var(--body-margin)',
 
 				0: '0',
 				'025': '1px',

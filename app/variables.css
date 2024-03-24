@@ -74,7 +74,7 @@
 	--content-width: 640px;
 	--page-left: auto;
 	--page-top: 128px;
-	--body-margin: 24px;
+	--body-margin: 16px;
 }
 
 [data-theme-color='dark'] {

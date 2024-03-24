@@ -5,7 +5,7 @@ export default function Home() {
 		<>
 			<div className="blur"></div>
 
-			<main className="min-h-screen vertical mx-auto pt-top pb-top max-w-page">
+			<main className="min-h-screen vertical mx-auto pt-top pb-top max-w-page px-body-margin">
 				<div className="main-grid">
 					<article className="col-start-2">
 						<div>
