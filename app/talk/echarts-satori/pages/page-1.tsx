@@ -1,6 +1,6 @@
 export const Page1 = () => {
 	return (
-		<div className="pt-12 md:pt-24">
+		<section className="pt-12 md:pt-24">
 			<h1 className="text-heading2 md:text-heading1 max-w-[834px]">
 				Sharing custom charts on the fly using Satori
 			</h1>
@@ -19,6 +19,6 @@ export const Page1 = () => {
 			</p>
 
 			<div className="w-[240px] h-[240px] bg-gray-300 mt-8"></div>
-		</div>
+		</section>
 	)
 }

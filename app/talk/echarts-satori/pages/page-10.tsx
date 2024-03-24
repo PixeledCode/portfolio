@@ -5,7 +5,7 @@ import { Twitter } from '../components/icons/twitter'
 
 export const Page10 = () => {
 	return (
-		<div className="pt-12 md:pt-16">
+		<section className="pt-12 md:pt-16">
 			<h2 className="text-heading4 text-extra-light uppercase">fin.</h2>
 
 			<p className="mt-4 text-body1 text-medium max-w-[834px]">
@@ -43,6 +43,6 @@ export const Page10 = () => {
 					<span>/pixeledcode</span>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

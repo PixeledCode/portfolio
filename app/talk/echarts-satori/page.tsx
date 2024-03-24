@@ -11,6 +11,7 @@ import { Page7 } from './pages/page-7'
 import { Page8 } from './pages/page-8'
 import { Page9 } from './pages/page-9'
 import { Page10 } from './pages/page-10'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
@@ -27,18 +28,26 @@ export default function Talk() {
 		Page10,
 	]
 
+	const prevSlide = React.useCallback(() => {
+		setSlide((prev) => {
+			if (prev === 0) return 0
+			return prev - 1
+		})
+	}, [setSlide])
+
+	const nextSlide = React.useCallback(() => {
+		setSlide((prev) => {
+			if (prev === pages.length - 1) return prev
+			return prev + 1
+		})
+	}, [pages.length, setSlide])
+
 	React.useEffect(() => {
 		const handleKey = (e: KeyboardEvent) => {
 			if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-				setSlide((prev) => {
-					if (prev === pages.length - 1) return prev
-					return prev + 1
-				})
+				nextSlide()
 			} else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-				setSlide((prev) => {
-					if (prev === 0) return 0
-					return prev - 1
-				})
+				prevSlide()
 			}
 		}
 
@@ -47,11 +56,44 @@ export default function Talk() {
 		return () => {
 			window.removeEventListener('keydown', handleKey)
 		}
-	}, [pages.length])
+	}, [nextSlide, prevSlide])
 
 	return (
-		<main className="max-w-talk mx-auto px-6 [&>*]:min-h-screen">
+		<main className="max-w-talk mx-auto px-6 [&>section]:min-h-screen">
 			{showPage(slide, pages)}
+
+			<div className="absolute grid justify-between gap-2 right-8 bottom-8 h-20 z-10">
+				{slide !== 0 ? (
+					<button
+						onClick={prevSlide}
+						aria-label="Previous slide"
+						className="self-start w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+						data-animate
+					>
+						<ChevronUp
+							className="transition-transform transform"
+							color="var(--accent)"
+							strokeWidth="3px"
+							size={36}
+						/>
+					</button>
+				) : null}
+				{slide !== pages.length - 1 ? (
+					<button
+						onClick={nextSlide}
+						aria-label="Next slide"
+						className="self-end w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+						data-animate
+					>
+						<ChevronDown
+							className="transition-transform transform"
+							color="var(--accent)"
+							strokeWidth="3px"
+							size={36}
+						/>
+					</button>
+				) : null}
+			</div>
 		</main>
 	)
 }

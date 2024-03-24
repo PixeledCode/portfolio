@@ -2,7 +2,7 @@ import { Spinner } from '../components'
 
 export const Page2 = () => {
 	return (
-		<div className="pt-12 md:pt-24">
+		<section className="pt-12 md:pt-24">
 			<h1 className="text-heading2 md:text-heading1 max-w-[834px]">
 				Sharing custom charts on the fly using Satori
 			</h1>
@@ -29,6 +29,6 @@ export const Page2 = () => {
 			<div className="mt-2">
 				<Spinner size={32} />
 			</div>
-		</div>
+		</section>
 	)
 }

@@ -1,6 +1,6 @@
 export const Page7 = () => {
 	return (
-		<div className="pt-12 md:pt-16">
+		<section className="pt-12 md:pt-16">
 			<h2 className="text-heading4 text-extra-light uppercase">
 				the quick fix
 			</h2>
@@ -10,6 +10,6 @@ export const Page7 = () => {
 			</p>
 
 			<div className="w-full h-[560px] bg-gray-300 mt-8"></div>
-		</div>
+		</section>
 	)
 }
