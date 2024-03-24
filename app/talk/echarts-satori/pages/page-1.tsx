@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export const Page1 = () => {
 	return (
 		<section className="pt-12 md:pt-24">
@@ -18,7 +20,13 @@ export const Page1 = () => {
 				ReactJS Bangalore, April 6, 2024
 			</p>
 
-			<div className="w-[240px] h-[240px] bg-gray-300 mt-8"></div>
+			<Image
+				src={'/talk.png'}
+				width={240}
+				height={240}
+				className="hidden md:block aspect-square mx-auto mt-8 "
+				alt="qr code for slide deck"
+			/>
 		</section>
 	)
 }

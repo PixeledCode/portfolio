@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Codepen } from '../components/icons/codepen'
 import { Github } from '../components/icons/github'
 import { LinkedIn } from '../components/icons/linkedin'
@@ -19,7 +20,13 @@ export const Page10 = () => {
 						github.com/PixeledCode/echarts-satori
 					</a>
 				</div>
-				<div className="hidden md:block md:w-72 aspect-square bg-gray-300 mx-auto mt-10 md:mt-20"></div>
+				<Image
+					src={'/site.png'}
+					width={288}
+					height={288}
+					className="hidden md:block aspect-square mx-auto mt-20 "
+					alt="qr code for pixeledcode.com"
+				/>
 
 				<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 md:text-body2 pb-10">
 					<a
