@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout'
 export const Page10 = () => {
 	return (
 		<Layout heading="fin." description="That’s all for today.">
-			<div className="text-body2">
+			<div className="md:text-body2">
 				<p className="text-light">Code & Demo</p>
 				<a
 					className="text-accent"
@@ -19,8 +19,8 @@ export const Page10 = () => {
 				</a>
 			</div>
 
-			<div className="w-[360px] h-[360px] bg-gray-300 mx-auto mt-20"></div>
-			<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 text-body2">
+			<div className="w-60 md:w-[360px] aspect-square bg-gray-300 mx-auto mt-10 md:mt-20"></div>
+			<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 md:text-body2 pb-10">
 				<a
 					href="https://linkedin.com/in/pixeledcode"
 					className="flex items-center gap-1"

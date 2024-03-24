@@ -13,6 +13,7 @@ import { Page9 } from './pages/page-9'
 import { Page10 } from './pages/page-10'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import MobileLayout from './mobile-layout'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
@@ -60,51 +61,56 @@ export default function Talk() {
 	}, [nextSlide, prevSlide])
 
 	return (
-		<main className="max-w-talk mx-auto px-6 [&>section]:min-h-screen">
-			{showPage(slide, pages)}
+		<>
+			<main className="max-w-talk mx-auto px-6 [&>section]:min-h-screen hidden md:block">
+				{showPage(slide, pages)}
 
-			<div className="absolute grid justify-between gap-2 right-8 bottom-8 h-20 z-10">
-				<AnimatePresence>
-					{slide !== 0 ? (
-						<motion.button
-							key="prev"
-							initial={{ opacity: 0 }}
-							animate={{ y: 2, opacity: 1 }}
-							exit={{ y: -2, opacity: 0 }}
-							onClick={prevSlide}
-							aria-label="Previous slide"
-							className="self-start w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
-						>
-							<ChevronUp
-								className="transition-transform transform"
-								color="var(--accent)"
-								strokeWidth="3px"
-								size={36}
-							/>
-						</motion.button>
-					) : null}
+				<div className="absolute grid justify-between gap-2 right-8 bottom-8 h-20 z-10">
+					<AnimatePresence>
+						{slide !== 0 ? (
+							<motion.button
+								key="prev"
+								initial={{ opacity: 0 }}
+								animate={{ y: 2, opacity: 1 }}
+								exit={{ y: -2, opacity: 0 }}
+								onClick={prevSlide}
+								aria-label="Previous slide"
+								className="self-start w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+							>
+								<ChevronUp
+									className="transition-transform transform"
+									color="var(--accent)"
+									strokeWidth="3px"
+									size={36}
+								/>
+							</motion.button>
+						) : null}
 
-					{slide !== pages.length - 1 ? (
-						<motion.button
-							key="next"
-							initial={{ opacity: 0 }}
-							animate={{ y: -2, opacity: 1 }}
-							exit={{ y: 2, opacity: 0 }}
-							onClick={nextSlide}
-							aria-label="Next slide"
-							className="self-end w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
-						>
-							<ChevronDown
-								className="transition-transform transform"
-								color="var(--accent)"
-								strokeWidth="3px"
-								size={36}
-							/>
-						</motion.button>
-					) : null}
-				</AnimatePresence>
-			</div>
-		</main>
+						{slide !== pages.length - 1 ? (
+							<motion.button
+								key="next"
+								initial={{ opacity: 0 }}
+								animate={{ y: -2, opacity: 1 }}
+								exit={{ y: 2, opacity: 0 }}
+								onClick={nextSlide}
+								aria-label="Next slide"
+								className="self-end w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+							>
+								<ChevronDown
+									className="transition-transform transform"
+									color="var(--accent)"
+									strokeWidth="3px"
+									size={36}
+								/>
+							</motion.button>
+						) : null}
+					</AnimatePresence>
+				</div>
+			</main>
+			<main className="md:hidden">
+				<MobileLayout />
+			</main>
+		</>
 	)
 }
 
