@@ -3,9 +3,11 @@
 import React from 'react'
 import Cookie from 'js-cookie'
 import { useMetaKeyPress } from '@/utils/use-meta-key-press'
+import { useDoubleClick } from '@/utils/use-double-click'
 
 export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 	const [theme, setTheme] = React.useState(initialTheme)
+	const doubleClick = useDoubleClick(handleClick)
 
 	React.useEffect(() => {
 		if (initialTheme === 'system') {
@@ -28,7 +30,12 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 
 	useMetaKeyPress('k', handleClick)
 
-	return <></>
+	return (
+		<div
+			onClick={(e: any) => doubleClick(e)}
+			className="absolute inset-0"
+		></div>
+	)
 
 	// if (theme === 'system') {
 	// 	return <button>Loading</button>
