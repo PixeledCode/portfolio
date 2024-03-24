@@ -12,11 +12,15 @@ import { Page8 } from './pages/page-8'
 import { Page9 } from './pages/page-9'
 import { Page10 } from './pages/page-10'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, animate } from 'framer-motion'
 import MobileLayout from './mobile-layout'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
+
+	const prevRef = React.useRef<HTMLButtonElement>(null)
+	const nextRef = React.useRef<HTMLButtonElement>(null)
+
 	const pages = [
 		Page1,
 		Page2,
@@ -33,6 +37,7 @@ export default function Talk() {
 	const prevSlide = React.useCallback(() => {
 		setSlide((prev) => {
 			if (prev === 0) return 0
+			if (prevRef?.current) animate(prevRef.current, { y: [-2, 0] })
 			return prev - 1
 		})
 	}, [setSlide])
@@ -40,6 +45,7 @@ export default function Talk() {
 	const nextSlide = React.useCallback(() => {
 		setSlide((prev) => {
 			if (prev === pages.length - 1) return prev
+			if (nextRef?.current) animate(nextRef.current, { y: [2, 0] })
 			return prev + 1
 		})
 	}, [pages.length, setSlide])
@@ -59,6 +65,7 @@ export default function Talk() {
 			window.removeEventListener('keydown', handleKey)
 		}
 	}, [nextSlide, prevSlide])
+	console.log(slide, pages.length - 1)
 
 	return (
 		<>
@@ -69,10 +76,12 @@ export default function Talk() {
 					<AnimatePresence>
 						{slide !== 0 ? (
 							<motion.button
+								ref={prevRef}
 								key="prev"
 								initial={{ opacity: 0 }}
 								animate={{ y: 2, opacity: 1 }}
 								exit={{ y: -2, opacity: 0 }}
+								whileTap={{ y: -2 }}
 								onClick={prevSlide}
 								aria-label="Previous slide"
 								className="self-start w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
@@ -88,10 +97,12 @@ export default function Talk() {
 
 						{slide !== pages.length - 1 ? (
 							<motion.button
+								ref={nextRef}
 								key="next"
 								initial={{ opacity: 0 }}
 								animate={{ y: -2, opacity: 1 }}
 								exit={{ y: 2, opacity: 0 }}
+								whileTap={{ y: 2 }}
 								onClick={nextSlide}
 								aria-label="Next slide"
 								className="self-end w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
