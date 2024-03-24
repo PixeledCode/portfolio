@@ -38,15 +38,17 @@ export default function Talk() {
 	const prevSlide = React.useCallback(() => {
 		setSlide((prev) => {
 			if (prev === 0) return 0
-			if (prevRef?.current) animate(prevRef.current, { y: [-2, 0] })
+			if (prevRef?.current && prev !== pages.length - 1)
+				animate(prevRef.current, { y: [-2, 0] })
 			return prev - 1
 		})
-	}, [setSlide])
+	}, [setSlide, pages.length])
 
 	const nextSlide = React.useCallback(() => {
 		setSlide((prev) => {
 			if (prev === pages.length - 1) return prev
-			if (nextRef?.current) animate(nextRef.current, { y: [2, 0] })
+			if (nextRef?.current && prev !== 0)
+				animate(nextRef.current, { y: [2, 0] })
 			return prev + 1
 		})
 	}, [pages.length, setSlide])
@@ -86,14 +88,9 @@ export default function Talk() {
 								whileTap={{ y: -2 }}
 								onClick={prevSlide}
 								aria-label="Previous slide"
-								className="self-start w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+								className="self-start w-9 h-9"
 							>
-								<ChevronUp
-									className="transition-transform transform"
-									color="var(--accent)"
-									strokeWidth="3px"
-									size={36}
-								/>
+								<ChevronUp color="var(--accent)" strokeWidth="3px" size={36} />
 							</motion.button>
 						) : null}
 
@@ -107,10 +104,9 @@ export default function Talk() {
 								whileTap={{ y: 2 }}
 								onClick={nextSlide}
 								aria-label="Next slide"
-								className="self-end w-9 h-9 [&>svg]:hover:scale-95 [&>svg]:active:scale-90"
+								className="self-end w-9 h-9"
 							>
 								<ChevronDown
-									className="transition-transform transform"
 									color="var(--accent)"
 									strokeWidth="3px"
 									size={36}

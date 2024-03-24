@@ -7,6 +7,7 @@ export const ProgressBar = ({ progress }: { progress: number }) => {
 				className="bg-accent h-full rounded-sm"
 				animate={{ x: `-${100 - progress}%` }}
 				initial={{ x: '-100%' }}
+				transition={{ ease: 'easeInOut', duration: 0.25 }}
 			/>
 		</div>
 	)
