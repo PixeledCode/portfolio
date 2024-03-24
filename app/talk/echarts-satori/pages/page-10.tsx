@@ -2,17 +2,12 @@ import { Codepen } from '../components/icons/codepen'
 import { Github } from '../components/icons/github'
 import { LinkedIn } from '../components/icons/linkedin'
 import { Twitter } from '../components/icons/twitter'
+import { Layout } from '../components/Layout'
 
 export const Page10 = () => {
 	return (
-		<section className="pt-12 md:pt-16">
-			<h2 className="text-heading4 text-extra-light uppercase">fin.</h2>
-
-			<p className="mt-4 text-body1 text-medium max-w-[834px]">
-				That’s all for today.
-			</p>
-
-			<div className="mt-4 text-body2">
+		<Layout heading="fin." description="That’s all for today.">
+			<div className="text-body2">
 				<p className="text-light">Code & Demo</p>
 				<a
 					className="text-accent"
@@ -25,24 +20,36 @@ export const Page10 = () => {
 			</div>
 
 			<div className="w-[360px] h-[360px] bg-gray-300 mx-auto mt-20"></div>
-			<div className="mt-20 mx-auto horizontal center flex-wrap gap-4 text-body2">
-				<div className="flex items-center gap-1">
+			<div className="mt-14 mx-auto horizontal center flex-wrap gap-4 text-body2">
+				<a
+					href="https://linkedin.com/in/pixeledcode"
+					className="flex items-center gap-1"
+				>
 					<LinkedIn />
 					<span>/in/pixeledcode</span>
-				</div>
-				<div className="flex items-center gap-1">
+				</a>
+				<a
+					href="https://twitter.com/pixeledcode"
+					className="flex items-center gap-1"
+				>
 					<Twitter />
 					<span>/pixeledcode</span>
-				</div>
-				<div className="flex items-center gap-1">
+				</a>
+				<a
+					href="https://codepen.io/pixeledcode"
+					className="flex items-center gap-1"
+				>
 					<Codepen />
 					<span>/pixeledcode</span>
-				</div>
-				<div className="flex items-center gap-1">
+				</a>
+				<a
+					href="https://github.com/pixeledcode"
+					className="flex items-center gap-1"
+				>
 					<Github />
 					<span>/pixeledcode</span>
-				</div>
+				</a>
 			</div>
-		</section>
+		</Layout>
 	)
 }
