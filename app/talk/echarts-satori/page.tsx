@@ -90,7 +90,12 @@ export default function Talk() {
 								aria-label="Previous slide"
 								className="self-start w-9 h-9"
 							>
-								<ChevronUp color="var(--accent)" strokeWidth="3px" size={36} />
+								<ChevronUp
+									className="pointer-events-none"
+									color="var(--accent)"
+									strokeWidth="3px"
+									size={36}
+								/>
 							</motion.button>
 						) : null}
 
@@ -110,6 +115,7 @@ export default function Talk() {
 									color="var(--accent)"
 									strokeWidth="3px"
 									size={36}
+									className="pointer-events-none"
 								/>
 							</motion.button>
 						) : null}

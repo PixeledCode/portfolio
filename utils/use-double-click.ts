@@ -1,9 +1,28 @@
 import { useCallback, useRef } from 'react'
 
+const excludedTags = [
+	'P',
+	'A',
+	'BUTTON',
+	'INPUT',
+	'TEXTAREA',
+	'SELECT',
+	'SPAN',
+	'H1',
+	'H2',
+	'H3',
+	'H4',
+	'H5',
+	'H6',
+	'LABEL',
+	'CODE',
+	'PRE',
+]
+
 export const useDoubleClick = (
 	doubleClick: (event: MouseEvent) => void,
 	click?: (event: MouseEvent) => void,
-	timeout = 200
+	timeout = 100
 ) => {
 	// we're using useRef here for the useCallback to rememeber the timeout
 	const clickTimeout: any = useRef()
@@ -25,7 +44,11 @@ export const useDoubleClick = (
 				}, timeout)
 			}
 			if (event.detail % 2 === 0) {
-				doubleClick(event)
+				if (!excludedTags.includes((event.target as HTMLElement).tagName)) {
+					event.stopPropagation()
+					event.preventDefault()
+					doubleClick(event)
+				}
 			}
 		},
 		[click, doubleClick, timeout]

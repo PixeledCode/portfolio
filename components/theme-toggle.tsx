@@ -17,25 +17,30 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 		}
 	}, [initialTheme])
 
+	React.useEffect(() => {
+		const body = document.querySelector('body')
+		body?.addEventListener('mousedown', doubleClick)
+
+		return () => {
+			body?.removeEventListener('mousedown', doubleClick)
+		}
+	}, [doubleClick])
+
 	function handleClick() {
-		const newTheme = theme === 'light' ? 'dark' : 'light'
-		setTheme(newTheme)
+		setTheme((prev) => {
+			const newTheme = prev === 'light' ? 'dark' : 'light'
+			Cookie.set('theme-color', newTheme, {
+				expires: 1000,
+			})
 
-		Cookie.set('theme-color', newTheme, {
-			expires: 1000,
+			document.documentElement.setAttribute('data-theme-color', newTheme)
+			return newTheme
 		})
-
-		document.documentElement.setAttribute('data-theme-color', newTheme)
 	}
 
 	useMetaKeyPress('k', handleClick)
 
-	return (
-		<div
-			onClick={(e: any) => doubleClick(e)}
-			className="absolute w-full h-full top-0 left-0"
-		></div>
-	)
+	return <></>
 
 	// if (theme === 'system') {
 	// 	return <button>Loading</button>
