@@ -52,3 +52,23 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 	// 	</button>
 	// )
 }
+
+export const useTheme = () => {
+	const [theme, setThemeHook] = React.useState<'light' | 'dark'>('light')
+
+	React.useEffect(() => {
+		const savedTheme = Cookie.get('theme-color') as 'light' | 'dark'
+		setTheme(savedTheme)
+	}, [])
+
+	function setTheme(newTheme: 'light' | 'dark') {
+		setThemeHook(newTheme)
+		Cookie.set('theme-color', newTheme, {
+			expires: 1000,
+		})
+
+		document.documentElement.setAttribute('data-theme-color', newTheme)
+	}
+
+	return [theme, setTheme] as const
+}

@@ -10,8 +10,6 @@ body {
 	text-rendering: optimizeLegibility;
 	color: var(--text-dark);
 	background-color: var(--bg);
-	transition: background-color 0.2s var(--ease-out-cubic),
-		color 0.2s var(--ease-out-cubic);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -66,4 +64,17 @@ body {
 	position: absolute;
 	inset: 0;
 	background: linear-gradient(var(--direction), var(--bg), var(--transparent));
+}
+
+.toolbar {
+	box-shadow: 0 30px 60px hsla(0, 0%, 9%, 0.08),
+		0 0 0 1px rgba(89, 89, 89, 0.06);
+	backdrop-filter: blur(24px);
+
+	--toolbar-bg: hsla(0, 0%, 99%, 0.5);
+}
+
+[data-theme-color='dark'] .toolbar {
+	--toolbar-bg: rgba(31, 31, 31, 0.5);
+	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px hsla(0, 0%, 100%, 0.12);
 }

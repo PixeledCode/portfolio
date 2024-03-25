@@ -1,3 +1,4 @@
+import { Toolbar } from '@/components/toolbar'
 import data from '@/content/home.json'
 
 export default function Home() {
@@ -104,6 +105,8 @@ export default function Home() {
 					</article>
 				</div>
 			</main>
+
+			<Toolbar />
 		</>
 	)
 }

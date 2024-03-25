@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
+    "clsx": "^2.1.0",
     "framer-motion": "^11.0.20",
-    "geist": "^1.2.2",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "tailwind-merge": "^2.2.2"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",

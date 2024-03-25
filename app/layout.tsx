@@ -1,5 +1,3 @@
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
 import { Lexend } from 'next/font/google'
 import { cookies } from 'next/headers'
 
@@ -67,9 +65,7 @@ export default function RootLayout({
 			<head>
 				<ThemeScript />
 			</head>
-			<body
-				className={`${GeistSans.variable} ${GeistMono.variable} ${lexend.className}`}
-			>
+			<body className={`${lexend.className}`}>
 				<ThemeToggle initialTheme={theme} />
 				{children}
 			</body>
