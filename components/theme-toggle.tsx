@@ -29,11 +29,7 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 	function handleClick() {
 		setTheme((prev) => {
 			const newTheme = prev === 'light' ? 'dark' : 'light'
-			Cookie.set('theme-color', newTheme, {
-				expires: 1000,
-			})
-
-			document.documentElement.setAttribute('data-theme-color', newTheme)
+			changeTheme(newTheme)
 			return newTheme
 		})
 	}
@@ -63,12 +59,16 @@ export const useTheme = () => {
 
 	function setTheme(newTheme: 'light' | 'dark') {
 		setThemeHook(newTheme)
-		Cookie.set('theme-color', newTheme, {
-			expires: 1000,
-		})
-
-		document.documentElement.setAttribute('data-theme-color', newTheme)
+		changeTheme(newTheme)
 	}
 
 	return [theme, setTheme] as const
+}
+
+function changeTheme(theme: 'light' | 'dark') {
+	Cookie.set('theme-color', theme, {
+		expires: 1000,
+	})
+
+	document.documentElement.setAttribute('data-theme-color', theme)
 }
