@@ -1,18 +1,37 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, animate } from 'framer-motion'
 import { useTheme } from './theme-toggle'
 import { cn } from '@/utils/helper'
-import Image from 'next/image'
+import { useMetaKeyPress } from '@/utils/use-meta-key-press'
+import React from 'react'
 
 export const Toolbar = () => {
+	const [show, setShow] = React.useState(true)
+	const ref = React.useRef<HTMLDivElement>(null)
 	const [theme, setTheme] = useTheme()
+	useMetaKeyPress('k', handleClick)
+
+	function handleClick() {
+		setShow((prev) => {
+			const newShow = !prev
+			if (ref.current) {
+				animate(ref.current, {
+					opacity: newShow ? 1 : 0,
+					y: newShow ? 0 : 20,
+				})
+			}
+			return newShow
+		})
+	}
 
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1 }}
-			className="toolbar fixed bottom-5 left-1/2 z-50 inline-flex max-h-12 -translate-x-1/2 items-center gap-2 overflow-hidden rounded-full bg-[var(--toolbar-bg)] py-4 px-4"
+			ref={ref}
+			initial={{ opacity: 0, y: 20, x: '-50%' }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ delay: 0.5 }}
+			className="toolbar fixed bottom-5 left-1/2 z-50 inline-flex max-h-12 items-center gap-2 overflow-hidden rounded-full bg-[var(--toolbar-bg)] py-4 px-4"
 		>
 			<div className="flex items-center gap-1">
 				<Button
@@ -26,7 +45,7 @@ export const Toolbar = () => {
 					<div className={cn('h-5 w-5 bg-default rounded-full')}></div>
 				</Button>
 				<Link
-					title="github"
+					title="check code"
 					aria-label="github"
 					href="https://github.com/PixeledCode"
 				>
@@ -44,7 +63,7 @@ export const Toolbar = () => {
 					</svg>
 				</Link>
 				<Link
-					title="twitter"
+					title="say hi"
 					aria-label="twitter"
 					href="https://twitter.com/PixeledCode"
 				>

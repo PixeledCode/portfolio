@@ -105,8 +105,6 @@ export default function Home() {
 					</article>
 				</div>
 			</main>
-
-			<Toolbar />
 		</>
 	)
 }

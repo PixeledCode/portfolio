@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import './globals.css'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { siteConfig } from '@/config/site'
+import { Toolbar } from '@/components/toolbar'
 
 const lexend = Lexend({
 	subsets: ['latin'],
@@ -68,6 +69,7 @@ export default function RootLayout({
 			<body className={`${lexend.className}`}>
 				<ThemeToggle initialTheme={theme} />
 				{children}
+				<Toolbar />
 			</body>
 		</html>
 	)

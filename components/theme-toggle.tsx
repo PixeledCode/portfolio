@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Cookie from 'js-cookie'
-import { useMetaKeyPress } from '@/utils/use-meta-key-press'
 import { useDoubleClick } from '@/utils/use-double-click'
 
 export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
@@ -17,14 +16,14 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 		}
 	}, [initialTheme])
 
-	React.useEffect(() => {
-		const body = document.querySelector('body')
-		body?.addEventListener('mousedown', doubleClick)
+	// React.useEffect(() => {
+	// 	const body = document.querySelector('body')
+	// 	body?.addEventListener('mousedown', doubleClick)
 
-		return () => {
-			body?.removeEventListener('mousedown', doubleClick)
-		}
-	}, [doubleClick])
+	// 	return () => {
+	// 		body?.removeEventListener('mousedown', doubleClick)
+	// 	}
+	// }, [doubleClick])
 
 	function handleClick() {
 		setTheme((prev) => {
@@ -33,8 +32,6 @@ export const ThemeToggle = ({ initialTheme }: { initialTheme: string }) => {
 			return newTheme
 		})
 	}
-
-	useMetaKeyPress('k', handleClick)
 
 	return <></>
 
