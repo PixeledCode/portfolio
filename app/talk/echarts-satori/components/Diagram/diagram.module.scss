@@ -1,0 +1,121 @@
+.wrapper {
+	margin-bottom: 50px;
+	padding-left: 40px;
+	overflow: auto;
+}
+
+.diagram {
+	margin-inline: auto;
+	margin-top: 32px;
+	--width: 673px;
+	--num-of-columns: 37;
+	--column-width: 18px;
+	transform: none;
+	transform-origin: 50% 50% 0px;
+
+	position: relative;
+	display: grid;
+	grid-template-rows: 40px 100px 40px 100px 40px;
+	grid-template-columns: repeat(var(--num-of-columns), var(--column-width));
+	margin-bottom: 50px;
+	border-bottom: 3px solid var(--text-dark);
+	border-radius: 1.5px 0px;
+	width: calc(var(--width) - 1px);
+	isolation: isolate;
+	border-left: 3px solid var(--text-dark);
+
+	background: repeating-linear-gradient(
+		90deg,
+		var(--bg),
+		var(--bg) 17px,
+		var(--gray5) 17px,
+		var(--gray5) 18px
+	);
+}
+
+.label {
+	position: absolute;
+	left: 0px;
+	width: 100px;
+	transform: translateY(-100%) rotate(-90deg) translateY(-6px);
+	transform-origin: left bottom 0px;
+	font-size: 1.25rem;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.strip {
+	grid-column: 1 / -1;
+	background: rgba(102, 122, 153, 0.07);
+	border-bottom: 1px solid var(--hover);
+	border-top: 1px solid var(--hover);
+}
+
+.arrow {
+	place-self: center;
+	z-index: 2;
+	transform: none;
+	transform-origin: 50% 50% 0px;
+}
+
+.item {
+	align-self: center;
+	display: flex;
+	-moz-box-pack: center;
+	justify-content: center;
+	-moz-box-align: center;
+	align-items: center;
+	height: 65px;
+	border: 2px solid var(--border-color);
+	border-radius: 4px;
+	background: var(--background);
+	white-space: pre-wrap;
+	text-align: center;
+	line-height: 1.2;
+	color: var(--text-on-bg);
+	transition: opacity 250ms;
+	cursor: default;
+	will-change: transform;
+	z-index: 1;
+
+	opacity: 1;
+	font-weight: 500;
+	transform: none;
+	transform-origin: 50% 50% 0px;
+
+	> div {
+		transform: none;
+		transform-origin: 50% 50% 0px;
+		font-size: 0.875rem;
+		will-change: transform;
+		line-height: inherit;
+
+		&[data-size='small'] {
+			font-size: 0.75rem;
+		}
+
+		> div {
+			line-height: inherit;
+			transition: transform 400ms;
+		}
+	}
+}
+
+.shadow {
+	grid-area: 1 / -3 / -1 / -1;
+	background: linear-gradient(
+		to right,
+		rgba(252, 252, 252, 0),
+		rgb(252, 252, 252)
+	);
+
+	[data-theme-color='dark'] & {
+		background: linear-gradient(to right, rgba(26, 26, 26, 0), rgb(26, 26, 26));
+	}
+}
+
+.svg {
+	display: block;
+	overflow: visible;
+}

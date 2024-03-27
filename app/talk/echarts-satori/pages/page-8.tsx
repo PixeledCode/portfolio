@@ -1,3 +1,4 @@
+import { Diagram } from '../components/Diagram'
 import { Layout } from '../components/Layout'
 
 export const Page8 = () => {
@@ -6,7 +7,9 @@ export const Page8 = () => {
 			heading="the improvement"
 			description="We can improve it further by creating a custom template (React Component) before download."
 		>
-			<div className="w-full h-60 md:h-[560px] bg-gray-300 mt-4 md:mt-8"></div>
+			<div className="w-full min-h-60 md:min-h-[560px] mt-4 md:mt-8">
+				<Diagram />
+			</div>
 		</Layout>
 	)
 }
