@@ -28,7 +28,7 @@
 	"writings": [
 		{
 			"title": "Sharing custom charts on the fly using Satori",
-			"description": "Share consistent and custom no matter the screen size",
+			"description": "Share consistent and custom charts no matter the screen size",
 			"link": "/talk/echarts-satori"
 		},
 		{
