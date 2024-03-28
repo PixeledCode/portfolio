@@ -7,7 +7,7 @@ import { useMetaKeyPress } from '@/utils/use-meta-key-press'
 import React from 'react'
 
 export const Toolbar = () => {
-	const [show, setShow] = React.useState(true)
+	const [show, setShow] = React.useState(false)
 	const ref = React.useRef<HTMLDivElement>(null)
 	const [theme, setTheme] = useTheme()
 	useMetaKeyPress('k', handleClick)
@@ -18,7 +18,7 @@ export const Toolbar = () => {
 			if (ref.current) {
 				animate(ref.current, {
 					opacity: newShow ? 1 : 0,
-					y: newShow ? 0 : 20,
+					y: newShow ? 0 : 40,
 				})
 			}
 			return newShow
@@ -29,7 +29,7 @@ export const Toolbar = () => {
 		<motion.div
 			ref={ref}
 			initial={{ opacity: 0, y: 20, x: '-50%' }}
-			animate={{ opacity: 1, y: 0 }}
+			// animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.5 }}
 			className="toolbar fixed bottom-5 left-1/2 z-50 inline-flex max-h-12 items-center gap-2 overflow-hidden rounded-full bg-[var(--toolbar-bg)] py-4 px-4"
 		>

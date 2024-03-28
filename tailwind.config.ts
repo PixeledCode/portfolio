@@ -70,6 +70,7 @@ const config: Config = {
 				medium: 'var(--text-medium)',
 				light: 'var(--text-light)',
 				'extra-light': 'var(--text-extra-light)',
+				'on-bg': 'var(--text-on-bg)',
 			},
 			spacing: {
 				page: '1072px',
