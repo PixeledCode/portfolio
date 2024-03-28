@@ -22,18 +22,7 @@ export default function Talk() {
 	const prevRef = React.useRef<HTMLButtonElement>(null)
 	const nextRef = React.useRef<HTMLButtonElement>(null)
 
-	const pages = [
-		Page1,
-		Page2,
-		Page3,
-		Page4,
-		Page5,
-		Page6,
-		Page7,
-		Page8,
-		Page9,
-		Page10,
-	]
+	const pages = [Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10]
 
 	const prevSlide = React.useCallback(() => {
 		setSlide((prev) => {
