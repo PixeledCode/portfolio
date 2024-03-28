@@ -1,12 +1,9 @@
 .wrapper {
-	margin-bottom: 50px;
 	padding-left: 40px;
 	overflow: auto;
 }
 
 .diagram {
-	margin-inline: auto;
-	margin-top: 32px;
 	--width: 673px;
 	--num-of-columns: 37;
 	--column-width: 18px;
@@ -87,13 +84,9 @@
 	> div {
 		transform: none;
 		transform-origin: 50% 50% 0px;
-		font-size: 0.875rem;
+		font-size: 0.75rem;
 		will-change: transform;
 		line-height: inherit;
-
-		&[data-size='small'] {
-			font-size: 0.75rem;
-		}
 
 		> div {
 			line-height: inherit;

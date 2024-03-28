@@ -77,17 +77,17 @@
 	--page-top: 128px;
 	--body-margin: 16px;
 
-	--dragram-bg-1: hsl(345deg 85% 90%);
-	--dragram-border-1: hsl(345deg 35% 65%);
+	--dragram-bg-red: hsl(345deg 85% 90%);
+	--dragram-border-red: hsl(345deg 35% 65%);
 
-	--dragram-bg-2: hsl(200deg 83% 90%);
-	--dragram-border-2: hsl(200deg 35% 65%);
+	--dragram-bg-blue: hsl(200deg 83% 90%);
+	--dragram-border-blue: hsl(200deg 35% 65%);
 
-	--dragram-bg-3: hsl(50deg 100% 90%);
-	--dragram-border-3: hsl(50deg 95% 40%);
+	--dragram-bg-yellow: hsl(50deg 100% 90%);
+	--dragram-border-yellow: hsl(50deg 95% 40%);
 
-	--dragram-bg-4: hsl(260deg 15% 88%);
-	--dragram-border-4: hsl(265deg 10% 60%);
+	--dragram-bg-gray: hsl(260deg 15% 88%);
+	--dragram-border-gray: hsl(265deg 10% 60%);
 }
 
 [data-theme-color='dark'] {
@@ -123,17 +123,17 @@
 	--gray70: hsla(246, 10%, 90%, 70%);
 	--gray60: hsla(246, 10%, 90%, 60%);
 
-	--dragram-bg-1: hsl(345deg 85% 10%);
-	--dragram-border-1: hsl(345deg 35% 35%);
+	--dragram-bg-red: hsl(345deg 85% 10%);
+	--dragram-border-red: hsl(345deg 35% 35%);
 
-	--dragram-bg-2: hsl(200deg 83% 10%);
-	--dragram-border-2: hsl(200deg 35% 35%);
+	--dragram-bg-blue: hsl(200deg 83% 10%);
+	--dragram-border-blue: hsl(200deg 35% 35%);
 
-	--dragram-bg-3: hsl(50deg 100% 10%);
-	--dragram-border-3: hsl(50deg 95% 30%);
+	--dragram-bg-yellow: hsl(50deg 100% 10%);
+	--dragram-border-yellow: hsl(50deg 95% 30%);
 
-	--dragram-bg-4: hsl(260deg 15% 12%);
-	--dragram-border-4: hsl(265deg 10% 40%);
+	--dragram-bg-gray: hsl(260deg 15% 12%);
+	--dragram-border-gray: hsl(265deg 10% 40%);
 }
 
 @layer utilities {
