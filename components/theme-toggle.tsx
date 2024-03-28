@@ -50,7 +50,10 @@ export const useTheme = () => {
 	const [theme, setThemeHook] = React.useState<'light' | 'dark'>('light')
 
 	React.useEffect(() => {
-		const savedTheme = Cookie.get('theme-color') as 'light' | 'dark'
+		const savedTheme = document.documentElement.getAttribute(
+			'data-theme-color'
+		) as 'light' | 'dark'
+
 		setTheme(savedTheme)
 	}, [])
 
