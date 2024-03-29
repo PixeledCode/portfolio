@@ -5,7 +5,7 @@ export default function MobileLayout({
 }) {
 	return (
 		<div className="flex flex-col">
-			{[...pages.slice(1)].map((Page, index) => (
+			{pages.map((Page, index) => (
 				<Page key={index} />
 			))}
 		</div>
