@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 export const Page2 = () => {
 	return (
-		<section className="pt-12 md:pt-0 vertical justify-center">
+		<section className="section pt-12 md:pt-0 vertical justify-center">
 			<h1 className="text-heading3 md:text-heading1 max-w-[834px] w-fit">
 				Sharing custom charts on the fly using Satori
 			</h1>

@@ -29,13 +29,14 @@ export const Page5 = () => {
 				</>
 			}
 		>
-			<Switch onClick={(type) => resizeChart(type, ref)} />
-
-			<div className="w-full flex mx-auto [&>html]:overflow-hidden" ref={ref}>
-				<iframe
-					className="mt-4 mx-auto md:mt-8 h-60 w-full md:h-[560px] "
-					src="https://echarts-satori.vercel.app/embed/screenshot"
-				/>
+			<div className="w-full vertical ">
+				<Switch onClick={(type) => resizeChart(type, ref)} />
+				<div ref={ref} className="mx-auto w-full [&>html]:overflow-hidden">
+					<iframe
+						className="mx-auto mt-4 h-60 w-full md:h-[560px]"
+						src="https://echarts-satori.vercel.app/embed/screenshot"
+					/>
+				</div>
 			</div>
 		</Layout>
 	)
@@ -47,14 +48,11 @@ export const Switch = ({
 	onClick: (type: 'mobile' | 'desktop') => void
 }) => {
 	const [isMobile, setIsMobile] = React.useState(false)
-	const classes = 'px-2 py-1 hover:bg-hover text-medium hidden md:block'
+	const classes = 'px-2 py-1 bg-bg hover:bg-hover text-medium hidden md:block'
 	return (
 		<div className="w-fit flex items-center rounded-md border-2 mt-2 self-end">
 			<button
-				className={cn(
-					classes,
-					isMobile && 'rounded-l-[3px] bg-gray-300 hover:bg-gray-300'
-				)}
+				className={cn(classes, isMobile && 'rounded-l-[3px] bg-gray1')}
 				onClick={() => {
 					setIsMobile(true)
 					onClick('mobile')
@@ -63,10 +61,7 @@ export const Switch = ({
 				mobile
 			</button>
 			<button
-				className={cn(
-					classes,
-					!isMobile && 'rounded-r-[3px] bg-gray-300 hover:bg-gray-300'
-				)}
+				className={cn(classes, !isMobile && 'rounded-r-[3px] bg-gray1')}
 				onClick={() => {
 					setIsMobile(false)
 					onClick('desktop')

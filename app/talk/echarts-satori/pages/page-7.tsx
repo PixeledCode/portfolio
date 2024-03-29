@@ -10,13 +10,14 @@ export const Page7 = () => {
 			heading="the quick fix"
 			description="Thanks to route handlers, we are able to share consistent charts across different screen sizes."
 		>
-			<Switch onClick={(type) => resizeChart(type, ref)} />
-
-			<div className="w-full flex mx-auto [&>html]:overflow-hidden" ref={ref}>
-				<iframe
-					className="mt-4 mx-auto md:mt-8 h-60 w-full md:h-[560px]"
-					src="https://echarts-satori.vercel.app/embed/route-handler"
-				/>
+			<div className="w-full vertical ">
+				<Switch onClick={(type) => resizeChart(type, ref)} />
+				<div ref={ref} className="mx-auto w-full [&>html]:overflow-hidden">
+					<iframe
+						className="mx-auto mt-4 h-60 w-full md:h-[560px]"
+						src="https://echarts-satori.vercel.app/embed/screenshot"
+					/>
+				</div>
 			</div>
 		</Layout>
 	)
