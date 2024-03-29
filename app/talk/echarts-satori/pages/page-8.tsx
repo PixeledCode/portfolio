@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout'
 export const Page8 = () => {
 	return (
 		<Layout
-			heading="the improvement"
+			heading="let’s go plus ultra"
 			description="We can improve it further by creating a custom template (React Component) before download."
 		>
 			<Diagram

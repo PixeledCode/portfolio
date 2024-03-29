@@ -49,10 +49,22 @@
 	--grayA11: rgba(0, 0, 0, 0.565);
 	--grayA12: rgba(0, 0, 0, 0.91);
 
-	--gray100: hsla(246, 78%, 11%, 100%);
-	--gray80: hsla(246, 78%, 11%, 80%);
-	--gray70: hsla(246, 78%, 11%, 70%);
-	--gray60: hsla(246, 78%, 11%, 60%);
+	--gray100: #0a0631;
+	--gray80: #3b385a;
+	--gray70: #54516f;
+	--gray60: #6c6a83;
+	--gray20: #6c6a83;
+	--gray10: #e6e6ea;
+	--gray3: #f8f8f9;
+
+	--grayA100: hsla(246, 78%, 11%, 100%);
+	--grayA80: hsla(246, 78%, 11%, 80%);
+	--grayA70: hsla(246, 78%, 11%, 70%);
+	--grayA60: hsla(246, 78%, 11%, 60%);
+	--grayA20: hsla(246, 78%, 11%, 20%);
+	--grayA10: hsla(246, 78%, 11%, 10%);
+	--grayA3: hsla(246, 78%, 11%, 3%);
+
 	--accent: #301fd4;
 	--white: #fff;
 	--black: #000;
@@ -63,9 +75,11 @@
 	--text-extra-light: var(--gray60);
 	--text-accent: var(--accent);
 
-	--selection: var(--grayA4);
-	--bg: var(--gray1);
+	--border-default: var(--gray20);
+	--bg: var(--gray10);
 	--hover: var(--gray3);
+	--selection: var(--grayA4);
+
 	--text-color: var(--gray12);
 	--text-muted: var(--gray11);
 	--text-on-bg: var(--gray12);
@@ -118,10 +132,21 @@
 	--grayA11: hsla(0, 0%, 100%, 0.592);
 	--grayA12: hsla(0, 0%, 100%, 0.923);
 
-	--gray100: hsla(246, 10%, 90%, 100%);
-	--gray80: hsla(246, 10%, 90%, 80%);
-	--gray70: hsla(246, 10%, 90%, 70%);
-	--gray60: hsla(246, 10%, 90%, 60%);
+	--gray100: #e6e6e6;
+	--gray80: #cccccc;
+	--gray70: #b3b3b3;
+	--gray60: #999999;
+	--gray20: #333333;
+	--gray10: #1a1a1a;
+	--gray3: #050505;
+
+	--grayA100: hsla(246, 10%, 90%, 100%);
+	--grayA80: hsla(246, 10%, 90%, 80%);
+	--grayA70: hsla(246, 10%, 90%, 70%);
+	--grayA60: hsla(246, 10%, 90%, 60%);
+	--grayA20: hsla(246, 10%, 90%, 20%);
+	--grayA10: hsla(246, 10%, 90%, 10%);
+	--grayA3: hsla(246, 10%, 90%, 3%);
 
 	--dragram-bg-red: hsl(345deg 85% 10%);
 	--dragram-border-red: hsl(345deg 35% 35%);

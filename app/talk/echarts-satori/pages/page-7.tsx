@@ -12,7 +12,7 @@ export const Page7 = () => {
 		>
 			<Switch onClick={(type) => resizeChart(type, ref)} />
 
-			<div className="w-full flex mx-auto" ref={ref}>
+			<div className="w-full flex mx-auto [&>html]:overflow-hidden" ref={ref}>
 				<iframe
 					className="mt-4 mx-auto md:mt-8 h-60 w-full md:h-[560px]"
 					src="https://echarts-satori.vercel.app/embed/route-handler"

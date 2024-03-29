@@ -9,7 +9,7 @@ body {
 	position: relative;
 	text-rendering: optimizeLegibility;
 	color: var(--text-dark);
-	background-color: var(--bg);
+	background-color: var(--gray1);
 }
 
 @media (prefers-reduced-motion: no-preference) {

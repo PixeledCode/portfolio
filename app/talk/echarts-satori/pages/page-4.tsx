@@ -5,8 +5,7 @@ export const Page4 = () => {
 	return (
 		<Layout
 			heading="The problem"
-			description="Let’s take a look at a chart and the current implementation for sharing
-		it."
+			description="The current implementation is pretty simple but not ideal."
 		>
 			<Diagram className="w-full mt-8 md:mt-12">
 				<Label top={200}>Server</Label>

@@ -24,16 +24,16 @@ export const Page5 = () => {
 			heading="The problem"
 			description={
 				<>
-					Here’s how it works on mobile. <br /> The charts are not
-					understandable once shared.
+					Here’s how it works on different screen sizes. <br /> The shared
+					charts are not consistent.
 				</>
 			}
 		>
 			<Switch onClick={(type) => resizeChart(type, ref)} />
 
-			<div className="w-full flex mx-auto" ref={ref}>
+			<div className="w-full flex mx-auto [&>html]:overflow-hidden" ref={ref}>
 				<iframe
-					className="mt-4 mx-auto md:mt-8 h-60 w-full md:h-[560px]"
+					className="mt-4 mx-auto md:mt-8 h-60 w-full md:h-[560px] "
 					src="https://echarts-satori.vercel.app/embed/screenshot"
 				/>
 			</div>
@@ -47,7 +47,7 @@ export const Switch = ({
 	onClick: (type: 'mobile' | 'desktop') => void
 }) => {
 	const [isMobile, setIsMobile] = React.useState(false)
-	const classes = 'px-2 py-1 hover:bg-hover text-medium'
+	const classes = 'px-2 py-1 hover:bg-hover text-medium hidden md:block'
 	return (
 		<div className="w-fit flex items-center rounded-md border-2 mt-2 self-end">
 			<button

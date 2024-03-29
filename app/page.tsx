@@ -42,7 +42,7 @@ export default function Home() {
 								'--stagger': 3,
 							}}
 						>
-							<h2 className="text-muted">Projects</h2>
+							<h2 className="text-medium">Projects</h2>
 							<div className="mt-2 vertical gap-4 md:gap-1">
 								{data.projects.map((project) => (
 									<ProjectLink key={project.title} project={project} />
@@ -57,7 +57,7 @@ export default function Home() {
 								'--stagger': 4,
 							}}
 						>
-							<h2 className="text-muted">Writing / Decks</h2>
+							<h2 className="text-medium">Writing / Decks</h2>
 							<div className="mt-2 vertical gap-4 md:gap-1">
 								{data.writings.map((writing) => (
 									<ProjectLink key={writing.title} project={writing} />
@@ -86,7 +86,7 @@ export default function Home() {
 								'--stagger': 6,
 							}}
 						>
-							<h2 className="text-muted">Connect</h2>
+							<h2 className="text-medium">Connect</h2>
 							<p className="mt-5">
 								Reach me through{' '}
 								<Link href="https://twitter.com/PixeledCode" label="Twitter" />,{' '}
@@ -135,7 +135,7 @@ const ProjectLink = ({
 			<h3 className="underline sm:no-underline decoration-muted">
 				{project.title}
 			</h3>
-			<p className="leading-7 text-muted">{project.description}</p>
+			<p className="leading-7 text-medium">{project.description}</p>
 		</a>
 	)
 }

@@ -46,13 +46,13 @@ export const Page10 = () => {
 					<Twitter />
 					<span>/pixeledcode</span>
 				</a>
-				<a
+				{/* <a
 					href="https://codepen.io/pixeledcode"
 					className="flex items-center gap-1"
 				>
 					<Codepen />
 					<span>/pixeledcode</span>
-				</a>
+				</a> */}
 				<a
 					href="https://github.com/pixeledcode"
 					className="flex items-center gap-1"
