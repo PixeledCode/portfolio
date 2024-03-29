@@ -1,3 +1,4 @@
+import { Diagram, Item, Label } from '../components/Diagram'
 import { Layout } from '../components/Layout'
 
 export const Page4 = () => {
@@ -7,7 +8,20 @@ export const Page4 = () => {
 			description="Let’s take a look at a chart and the current implementation for sharing
 		it."
 		>
-			<div className="w-full h-60 md:h-[560px] bg-gray-300 mt-4 md:mt-8"></div>
+			<Diagram className="w-full mt-8 md:mt-12">
+				<Label top={200}>Server</Label>
+				<Label top={420}>Client</Label>
+
+				<Item color="red" row={4} col={1} size={5}>
+					Download Click
+				</Item>
+				<Item color="yellow" row={4} col={6} size={5}>
+					Screenshot the DOM
+				</Item>
+				<Item color="red" row={4} col={11} size={5}>
+					Download Image
+				</Item>
+			</Diagram>
 		</Layout>
 	)
 }

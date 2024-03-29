@@ -4,15 +4,15 @@
 }
 
 .diagram {
-	--width: 673px;
-	--num-of-columns: 37;
+	--width: 800px;
+	--num-of-columns: 45;
 	--column-width: 18px;
 	transform: none;
 	transform-origin: 50% 50% 0px;
 
 	position: relative;
 	display: grid;
-	grid-template-rows: 40px 100px 40px 100px 40px;
+	grid-template-rows: 80px 140px 80px 140px 80px;
 	grid-template-columns: repeat(var(--num-of-columns), var(--column-width));
 	margin-bottom: 50px;
 	border-bottom: 3px solid var(--text-dark);
@@ -84,7 +84,7 @@
 	> div {
 		transform: none;
 		transform-origin: 50% 50% 0px;
-		font-size: 0.75rem;
+		font-size: 0.875rem;
 		will-change: transform;
 		line-height: inherit;
 
