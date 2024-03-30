@@ -2,7 +2,7 @@ import { Layout } from '../components/Layout'
 
 export const Page9 = () => {
 	return (
-		<Layout heading="let’s go plus ultra" description="ft. Satori">
+		<Layout heading="let’s go plus ultra" description="with Next.js and Satori">
 			<div className="text-body2 md:mt-8">
 				<p className="text-light">also, it isn’t slow..</p>
 				<div className="w-full h-60 bg-gray-300 mt-6" />

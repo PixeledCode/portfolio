@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Page1 } from './pages/page-1'
 import { Page2 } from './pages/page-2'
 import { Page3 } from './pages/page-3'
 import { Page4 } from './pages/page-4'
@@ -15,6 +14,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { motion, AnimatePresence, animate } from 'framer-motion'
 import MobileLayout from './mobile-layout'
 import { ProgressBar } from '@/components/progress-bar'
+import { Pag85 } from './pages/page-8.5'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
@@ -22,7 +22,18 @@ export default function Talk() {
 	const prevRef = React.useRef<HTMLButtonElement>(null)
 	const nextRef = React.useRef<HTMLButtonElement>(null)
 
-	const pages = [Page2, Page3, Page4, Page5, Page6, Page7, Page8, Page9, Page10]
+	const pages = [
+		Page2,
+		Page3,
+		Page4,
+		Page5,
+		Page6,
+		Page7,
+		Page8,
+		Pag85,
+		Page9,
+		Page10,
+	]
 
 	const prevSlide = React.useCallback(() => {
 		setSlide((prev) => {
