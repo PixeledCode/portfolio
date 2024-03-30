@@ -8,7 +8,7 @@ export const Page8 = () => {
 			description="We can improve it further by creating a custom template (React Component) before download."
 		>
 			<Diagram
-				className="w-full mt-8 md:mt-12"
+				className="mt-8 md:mt-12"
 				style={{
 					'--width': '900px',
 					'--num-of-columns': 52,

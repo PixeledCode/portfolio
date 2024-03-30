@@ -7,7 +7,7 @@ export const Page4 = () => {
 			heading="The problem"
 			description="The current implementation is pretty simple but not ideal."
 		>
-			<Diagram className="w-full mt-8 md:mt-12">
+			<Diagram className="mt-8 md:mt-12">
 				<Label top={200}>Server</Label>
 				<Label top={420}>Client</Label>
 

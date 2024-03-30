@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout'
 export const Page6 = () => {
 	return (
 		<Layout heading="the quick fix" description="ft. NextJS">
-			<Diagram className="w-full mt-8 md:mt-12">
+			<Diagram className="mt-8 md:mt-12">
 				<Label top={200}>Server</Label>
 				<Label top={420}>Client</Label>
 

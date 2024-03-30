@@ -1,14 +1,13 @@
 .wrapper {
 	padding-left: 40px;
 	overflow: auto;
+	max-width: calc(100vw - 52px);
 }
 
 .diagram {
 	--width: 800px;
 	--num-of-columns: 45;
 	--column-width: 18px;
-	transform: none;
-	transform-origin: 50% 50% 0px;
 
 	position: relative;
 	display: grid;

@@ -33,7 +33,7 @@ export const Page5 = () => {
 				<Switch onClick={(type) => resizeChart(type, ref)} />
 				<div ref={ref} className="mx-auto w-full [&>html]:overflow-hidden">
 					<iframe
-						className="mx-auto mt-4 h-60 w-full md:h-[560px]"
+						className="mx-auto mt-4 w-full h-[560px]"
 						src="https://echarts-satori.vercel.app/embed/screenshot"
 					/>
 				</div>
