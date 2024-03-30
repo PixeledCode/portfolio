@@ -1,4 +1,3 @@
-import { Toolbar } from '@/components/toolbar'
 import data from '@/content/home.json'
 
 export default function Home() {
@@ -13,6 +12,9 @@ export default function Home() {
 							<h1 className="font-medium" data-animate>
 								PixeledCode
 							</h1>
+							<p className="mt-1 text-light">
+								Hi, I’m Shoaib, a design-friendly frontend engineer
+							</p>
 							<p
 								className="mt-6"
 								data-animate
@@ -20,7 +22,7 @@ export default function Home() {
 									'--stagger': 1,
 								}}
 							>
-								Frontend Engineer bridging the gap between design and tech at{' '}
+								bridging the gap between design and tech at{' '}
 								<Link href="https://civicdatalab.in" label="CivicDataLab" />. I
 								like to build experiences that are delightful to use.
 							</p>

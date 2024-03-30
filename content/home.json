@@ -14,13 +14,13 @@
 		},
 		{
 			"title": "Counter",
-			"description": "An app to keep track and also perform habit tracking",
+			"description": "An offline app to keep track of stuff or habits",
 			"link": "https://github.com/PixeledCode/counter-app",
 			"external": true
 		},
 		{
 			"title": "Boarding Pass",
-			"description": "An app to store boarding passes like Apple Wallet",
+			"description": "An offline app to store boarding passes like Apple Wallet",
 			"link": "https://github.com/PixeledCode/boarding-pass",
 			"external": true
 		}
