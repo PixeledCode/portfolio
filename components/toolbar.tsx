@@ -11,6 +11,7 @@ export const Toolbar = () => {
 	const ref = React.useRef<HTMLDivElement>(null)
 	const [theme, setTheme] = useTheme()
 	useMetaKeyPress('k', handleClick)
+	useMetaKeyPress('b', toggleFullScreen)
 
 	function handleClick() {
 		setShow((prev) => {
@@ -23,6 +24,14 @@ export const Toolbar = () => {
 			}
 			return newShow
 		})
+	}
+
+	function toggleFullScreen() {
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen()
+		} else if (document.exitFullscreen) {
+			document.exitFullscreen()
+		}
 	}
 
 	return (
