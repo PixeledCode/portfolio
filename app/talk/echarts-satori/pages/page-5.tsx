@@ -47,27 +47,34 @@ export const Switch = ({
 }: {
 	onClick: (type: 'mobile' | 'desktop') => void
 }) => {
-	const [isMobile, setIsMobile] = React.useState(false)
-	const classes = 'px-2 py-1 bg-bg hover:bg-hover text-medium hidden md:block'
+	const [_, setIsMobile] = React.useState(false)
+	const ref = React.useRef<HTMLSpanElement>(null)
+
+	function handleClick() {
+		setIsMobile((prev) => {
+			onClick(prev ? 'desktop' : 'mobile')
+			if (ref.current)
+				animate(ref.current, {
+					transform: `translateX(${prev ? 0 : 100}%)`,
+				})
+			return !prev
+		})
+	}
+
 	return (
-		<div className="w-fit flex items-center rounded-md border-2 mt-2 self-end">
+		<div className="w-fit flex items-center rounded-md border-2 mt-2 self-end relative">
 			<button
-				className={cn(classes, isMobile && 'rounded-l-[3px] bg-gray1')}
-				onClick={() => {
-					setIsMobile(true)
-					onClick('mobile')
-				}}
+				className={cn('bg-bg text-medium hidden md:block ')}
+				onClick={handleClick}
 			>
-				mobile
-			</button>
-			<button
-				className={cn(classes, !isMobile && 'rounded-r-[3px] bg-gray1')}
-				onClick={() => {
-					setIsMobile(false)
-					onClick('desktop')
-				}}
-			>
-				desktop
+				<span className="px-2 py-1 flex gap-3 ">
+					<span
+						className="absolute inset-0 bg-gray-50 w-1/2 rounded-[5px] elevation"
+						ref={ref}
+					/>
+					<span className="w-16 z-1 relative">desktop</span>
+					<span className="w-16 z-1 relative">mobile</span>
+				</span>
 			</button>
 		</div>
 	)

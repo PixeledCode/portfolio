@@ -13,7 +13,19 @@ export const Toolbar = () => {
 	useMetaKeyPress('k', handleClick)
 	useMetaKeyPress('b', toggleFullScreen)
 
-	function handleClick() {
+	function handleClick(value?: boolean) {
+		if (value !== undefined) {
+			setShow(() => {
+				if (ref.current) {
+					animate(ref.current, {
+						opacity: value ? 1 : 0,
+						y: value ? 0 : 40,
+					})
+				}
+				return value
+			})
+			return
+		}
 		setShow((prev) => {
 			const newShow = !prev
 			if (ref.current) {
@@ -28,6 +40,7 @@ export const Toolbar = () => {
 
 	function toggleFullScreen() {
 		if (!document.fullscreenElement) {
+			handleClick(false)
 			document.documentElement.requestFullscreen()
 		} else if (document.exitFullscreen) {
 			document.exitFullscreen()

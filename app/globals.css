@@ -78,3 +78,13 @@ body {
 	--toolbar-bg: rgba(31, 31, 31, 0.5);
 	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px hsla(0, 0%, 100%, 0.12);
 }
+
+.elevation {
+	--shadow-color: 240deg 9% 55%;
+
+	--box-shadow: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.64),
+		0.4px 0.7px 0.7px -2.3px hsl(var(--shadow-color) / 0.45),
+		1px 2px 1.8px -4.5px hsl(var(--shadow-color) / 0.26);
+
+	box-shadow: var(--box-shadow);
+}
