@@ -18,7 +18,7 @@ export const Page7 = () => {
 				>
 					<iframe
 						className="mx-auto mt-4 w-full h-[560px]"
-						src="https://echarts-satori.vercel.app/embed/screenshot"
+						src="https://echarts-satori.vercel.app/embed/route-handler"
 					/>
 				</div>
 			</div>
