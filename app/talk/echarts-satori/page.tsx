@@ -15,6 +15,7 @@ import { motion, AnimatePresence, animate } from 'framer-motion'
 import MobileLayout from './mobile-layout'
 import { ProgressBar } from '@/components/progress-bar'
 import { Pag85 } from './pages/page-8.5'
+import { cn } from '@/utils/helper'
 
 export default function Talk() {
 	const [slide, setSlide] = React.useState(0)
@@ -90,12 +91,7 @@ export default function Talk() {
 								aria-label="Previous slide"
 								className="self-start w-9 h-9"
 							>
-								<ChevronUp
-									className="pointer-events-none"
-									color="var(--accent)"
-									strokeWidth="3px"
-									size={36}
-								/>
+								<Chevron className="rotate-180" />
 							</motion.button>
 						) : null}
 
@@ -111,12 +107,7 @@ export default function Talk() {
 								aria-label="Next slide"
 								className="self-end w-9 h-9"
 							>
-								<ChevronDown
-									color="var(--accent)"
-									strokeWidth="3px"
-									size={36}
-									className="pointer-events-none"
-								/>
+								<Chevron />
 							</motion.button>
 						) : null}
 					</AnimatePresence>
@@ -133,3 +124,18 @@ function showPage(page: number, pages: React.FC[]) {
 	const Page = pages[page % pages.length]
 	return <Page />
 }
+
+const Chevron = ({ className, ...args }: { className?: string }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width="36"
+		className={cn('pointer-events-none', className)}
+		height="36"
+		{...args}
+	>
+		<path
+			fill="var(--accent)"
+			d="M7.5 10.5h3V12H12v1.5h1.5V15H15v1.5h1.5V18h3v-1.5H21V15h1.5v-1.5H24V12h1.5v-1.5h3V12H30v3h-1.5v1.5H27V18h-1.5v1.5H24V21h-1.5v1.5H21V24h-1.5v1.5h-3V24H15v-1.5h-1.5V21H12v-1.5h-1.5V18H9v-1.5H7.5V15H6v-3h1.5v-1.5Z"
+		/>
+	</svg>
+)
