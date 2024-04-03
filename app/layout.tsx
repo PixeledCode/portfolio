@@ -59,7 +59,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	const savedTheme = cookies().get('theme-color')
-	const theme = savedTheme?.value || 'system'
+	const theme = savedTheme?.value || 'light'
 
 	return (
 		<html lang="en" data-theme-color={theme}>
