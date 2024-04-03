@@ -6,13 +6,13 @@ export const Page9 = () => {
 	const id = React.useId()
 	return (
 		<Layout heading="let’s go plus ultra" description="with Next.js and Satori">
-			<div className="text-body2 md:mt-8">
+			<div className="md:text-body2 md:mt-8">
 				<p className="text-light">also, it isn’t slow..</p>
 				<Image
 					src={'/performance.svg'}
 					width={630}
-					height={235}
-					className="w-full object-contain mt-6"
+					height={135}
+					className="max-w-full object-contain md:mt-6 h-[240px]"
 					alt="table of performance stats of different browers while downloading charts in different ways"
 					aria-describedby={id}
 				/>
@@ -57,7 +57,7 @@ export const Page9 = () => {
 					</tbody>
 				</table>
 
-				<div className="mt-12 vertical gap-4">
+				<div className="md:mt-12 vertical gap-4">
 					<p className="text-light">it solves for</p>
 					<div className="flex items-center gap-6">
 						<CheckSVG />
@@ -70,8 +70,8 @@ export const Page9 = () => {
 				</div>
 
 				<div>
-					<p className="text-light mt-10">and as a bonus, for</p>
-					<div className="flex items-center gap-6 mt-4">
+					<p className="text-light mt-6 md:mt-10">and as a bonus, for</p>
+					<div className="flex items-center gap-2 md:gap-6 md:mt-4">
 						<span>browser compatibility</span>
 						<HeartSVG />
 					</div>

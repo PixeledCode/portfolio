@@ -9,20 +9,20 @@ export const Page3 = () => {
 		that need to be shareable."
 		>
 			<div className="w-full md:h-[573px] mt-8 md:mt-12 overflow-auto md:overflow-visible">
-				<div className="flex gap-3 ">
+				<div className="flex gap-3 justify-center overflow-auto">
 					<Image
 						src="/deck/d4d.png"
 						alt="screenshot of d4d platform"
 						width={554}
 						height={355}
-						className="object-contain max-w-full"
+						className="object-contain w-full max-w-[520px]"
 					/>
 					<Image
 						src="/deck/constituency.png"
 						alt="screenshot of constituency platform"
 						width={554}
 						height={355}
-						className="object-contain max-w-full"
+						className="object-contain w-full max-w-[520px]"
 					/>
 				</div>
 				<p className="mt-6 text-center text-extra-light">
