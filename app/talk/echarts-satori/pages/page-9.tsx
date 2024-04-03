@@ -1,11 +1,61 @@
+import Image from 'next/image'
 import { Layout } from '../components/Layout'
+import React from 'react'
 
 export const Page9 = () => {
+	const id = React.useId()
 	return (
 		<Layout heading="let’s go plus ultra" description="with Next.js and Satori">
 			<div className="text-body2 md:mt-8">
 				<p className="text-light">also, it isn’t slow..</p>
-				<div className="w-full h-60 bg-gray-300 mt-6" />
+				<Image
+					src={'/performance.svg'}
+					width={630}
+					height={235}
+					className="w-full object-contain mt-6"
+					alt="table of performance stats of different browers while downloading charts in different ways"
+					aria-describedby={id}
+				/>
+
+				<table
+					id={id}
+					className="text-sm text-light font-normal border-collapse sr-only"
+				>
+					<thead>
+						<tr>
+							<td></td>
+							<th>Chrome</th>
+							<th>Firefox</th>
+							<th>Safari</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Screenshot</th>
+							<td>180ms</td>
+							<td>130ms</td>
+							<td>230ms</td>
+						</tr>
+						<tr>
+							<th>Route Handler</th>
+							<td>400ms</td>
+							<td>350ms</td>
+							<td>500ms</td>
+						</tr>
+						<tr>
+							<th>Satori</th>
+							<td>28ms</td>
+							<td>25ms</td>
+							<td>30ms</td>
+						</tr>
+						<tr>
+							<th>Satori + Route</th>
+							<td>450ms</td>
+							<td>500ms</td>
+							<td>750ms</td>
+						</tr>
+					</tbody>
+				</table>
 
 				<div className="mt-12 vertical gap-4">
 					<p className="text-light">it solves for</p>
