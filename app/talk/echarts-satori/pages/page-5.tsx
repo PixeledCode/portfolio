@@ -2,6 +2,7 @@ import React from 'react'
 import { Layout } from '../components/Layout'
 import { motion, animate } from 'framer-motion'
 import { cn } from '@/utils/helper'
+import { iframeURL } from '../config'
 
 export function resizeChart(
 	type: 'mobile' | 'desktop',
@@ -34,7 +35,7 @@ export const Page5 = () => {
 				<div ref={ref} className="mx-auto w-full [&>html]:overflow-hidden">
 					<iframe
 						className="mx-auto mt-4 w-full h-[560px]"
-						src="https://echarts-satori.vercel.app/embed/screenshot"
+						src={`${iframeURL}/embed/screenshot`}
 					/>
 				</div>
 			</div>

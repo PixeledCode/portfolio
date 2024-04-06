@@ -11,8 +11,8 @@ export const Page9 = () => {
 				<Image
 					src={'/performance.svg'}
 					width={630}
-					height={135}
-					className="max-w-full object-contain md:mt-6 h-[240px]"
+					height={240}
+					className="w-full object-contain my-4 md:my-0 md:mt-6 md:h-[240px]"
 					alt="table of performance stats of different browers while downloading charts in different ways"
 					aria-describedby={id}
 				/>

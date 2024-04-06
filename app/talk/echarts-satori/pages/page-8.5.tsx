@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout } from '../components/Layout'
 import { resizeChart, Switch } from './page-5'
+import { iframeURL } from '../config'
 
 export const Pag85 = () => {
 	const ref = React.useRef<HTMLIFrameElement>(null)
@@ -15,7 +16,7 @@ export const Pag85 = () => {
 				>
 					<iframe
 						className="mx-auto mt-4 w-full h-[560px]"
-						src="https://echarts-satori.vercel.app/embed/satori"
+						src={`${iframeURL}/embed/satori`}
 					/>
 				</div>
 			</div>
