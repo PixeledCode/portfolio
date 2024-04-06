@@ -26,10 +26,7 @@ export const Page6 = () => {
 
 				<Arrow col={27} />
 
-				<Item color="gray" row={4} col={31} size={6}>
-					Convert SVG to Data URI
-				</Item>
-				<Item color="red" row={4} col={37} size={5}>
+				<Item color="red" row={4} col={31} size={5}>
 					Download Image
 				</Item>
 			</Diagram>
