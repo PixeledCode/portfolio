@@ -32,27 +32,27 @@ export const Page9 = () => {
 					<tbody>
 						<tr>
 							<th>Screenshot</th>
-							<td>180ms</td>
-							<td>130ms</td>
-							<td>230ms</td>
+							<td>98ms</td>
+							<td>128ms</td>
+							<td>208ms</td>
 						</tr>
 						<tr>
 							<th>Route Handler</th>
-							<td>400ms</td>
-							<td>350ms</td>
-							<td>500ms</td>
+							<td>45ms</td>
+							<td>43ms</td>
+							<td>173ms</td>
 						</tr>
 						<tr>
 							<th>Satori</th>
-							<td>28ms</td>
-							<td>25ms</td>
 							<td>30ms</td>
+							<td>23ms</td>
+							<td>35ms</td>
 						</tr>
 						<tr>
 							<th>Satori + Route</th>
-							<td>450ms</td>
-							<td>500ms</td>
-							<td>750ms</td>
+							<td>115ms</td>
+							<td>112ms</td>
+							<td>400ms</td>
 						</tr>
 					</tbody>
 				</table>
