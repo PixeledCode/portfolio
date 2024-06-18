@@ -99,9 +99,7 @@ export default function Home() {
 								, or{' '}
 								<Link href="mailto:ashoaib540918@gmail.com" label="Email" />. My
 								work is available at{' '}
-								<Link href="https://github.com/PixeledCode" label="Github" />,{' '}
-								<Link href="https://codepen.io/pixeledcode" label="Codepen" />,
-								and <Link href="https://bento.me/pixeledcode" label="Bento" />
+								<Link href="https://github.com/PixeledCode" label="Github" /> and <Link href="https://codepen.io/pixeledcode" label="Codepen" />
 							</p>
 						</section>
 					</article>
