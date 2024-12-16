@@ -23,7 +23,7 @@ export default function Home() {
 								}}
 							>
 								bridging the gap between design and tech at{' '}
-								<Link href="https://civicdatalab.in" label="CivicDataLab" />. I
+								<Link href="https://www.twilio.com" label="Twilio" />. I
 								like to build experiences that are delightful to use.
 							</p>
 							<p
